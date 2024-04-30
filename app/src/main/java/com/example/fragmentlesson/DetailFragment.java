@@ -10,11 +10,15 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.fragmentlesson.view.CustomView;
+
 public class DetailFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_detail,container,false);
+        CustomView customView = new CustomView(requireContext());
+        return customView;
+        //        return inflater.inflate(R.layout.fragment_detail,container,false);
     }
 
     public void setSelectedItem(String selectedItem){
